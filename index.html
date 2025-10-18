@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APEX - Performance Redéfinie</title>
+    <meta name="description" content="APEX - La nouvelle génération de chaussures de sport. Innovation, performance et style redéfinis.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ff6b35">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>APEX</h1>
+                <span class="logo-tagline">PERFORMANCE</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Accueil</a></li>
+                <li><a href="#products" class="nav-link">Produits</a></li>
+                <li><a href="#technology" class="nav-link">Technologie</a></li>
+                <li><a href="#about" class="nav-link">À propos</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">REDÉFINIR</span>
+                    <span class="title-line">LA PERFORMANCE</span>
+                </h1>
+                <p class="hero-description">
+                    Découvrez APEX, la nouvelle génération de chaussures de sport qui révolutionne 
+                    votre expérience athlétique avec une technologie de pointe et un design futuriste.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Découvrir</button>
+                    <button class="btn btn-secondary">Voir la Collection</button>
+                </div>
+            </div>
+            <div class="hero-3d">
+                <canvas id="hero-canvas"></canvas>
+                <div class="floating-elements">
+                    <div class="floating-element" data-speed="2"></div>
+                    <div class="floating-element" data-speed="3"></div>
+                    <div class="floating-element" data-speed="1.5"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Collection APEX</h2>
+                <p class="section-subtitle">Innovation et performance dans chaque modèle</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card" data-product="runner">
+                    <div class="product-3d">
+                        <canvas class="product-canvas"></canvas>
+                    </div>
+                    <div class="product-info">
+                        <h3>APEX Runner Pro</h3>
+                        <p>Conçue pour la vitesse pure</p>
+                        <div class="product-price">189€</div>
+                        <button class="btn btn-outline">Explorer</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-product="trainer">
+                    <div class="product-3d">
+                        <canvas class="product-canvas"></canvas>
+                    </div>
+                    <div class="product-info">
+                        <h3>APEX Trainer X</h3>
+                        <p>Polyvalence et confort ultime</p>
+                        <div class="product-price">159€</div>
+                        <button class="btn btn-outline">Explorer</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-product="elite">
+                    <div class="product-3d">
+                        <canvas class="product-canvas"></canvas>
+                    </div>
+                    <div class="product-info">
+                        <h3>APEX Elite</h3>
+                        <p>Le summum de la technologie</p>
+                        <div class="product-price">249€</div>
+                        <button class="btn btn-outline">Explorer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="technology">
+        <div class="container">
+            <div class="tech-content">
+                <div class="tech-info">
+                    <h2 class="section-title">Technologie APEX</h2>
+                    <div class="tech-features">
+                        <div class="tech-feature">
+                            <div class="tech-icon">⚡</div>
+                            <h3>APEX Boost</h3>
+                            <p>Système de retour d'énergie révolutionnaire qui propulse chaque foulée</p>
+                        </div>
+                        <div class="tech-feature">
+                            <div class="tech-icon">🌊</div>
+                            <h3>FlexFlow</h3>
+                            <p>Semelle adaptative qui s'ajuste à votre style de course</p>
+                        </div>
+                        <div class="tech-feature">
+                            <div class="tech-icon">🛡️</div>
+                            <h3>DuraShield</h3>
+                            <p>Protection avancée et durabilité exceptionnelle</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-visual">
+                    <canvas id="tech-canvas"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">L'Innovation APEX</h2>
+                    <p>
+                        Née de la passion pour l'excellence athlétique, APEX repousse les limites 
+                        de ce qui est possible dans le monde des chaussures de sport. Notre équipe 
+                        d'ingénieurs et de designers travaille sans relâche pour créer des produits 
+                        qui transforment votre performance.
+                    </p>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Brevets d'innovation</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">2M+</div>
+                            <div class="stat-label">Athlètes équipés</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">15</div>
+                            <div class="stat-label">Pays de présence</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="geometric-shapes">
+                        <div class="shape shape-1"></div>
+                        <div class="shape shape-2"></div>
+                        <div class="shape shape-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 class="section-title">Rejoignez l'Évolution</h2>
+                    <p>Découvrez comment APEX peut transformer votre performance</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <strong>Email:</strong> info@apex-performance.com
+                        </div>
+                        <div class="contact-item">
+                            <strong>Téléphone:</strong> +33 1 23 45 67 89
+                        </div>
+                        <div class="contact-item">
+                            <strong>Adresse:</strong> 123 Avenue de l'Innovation, 75001 Paris
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Nom complet" required>
+                        <input type="email" placeholder="Email" required>
+                        <textarea placeholder="Message" rows="5" required></textarea>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>APEX</h3>
+                    <p>Performance Redéfinie</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Produits</h4>
+                        <ul>
+                            <li><a href="#">Running</a></li>
+                            <li><a href="#">Training</a></li>
+                            <li><a href="#">Lifestyle</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Guide des tailles</a></li>
+                            <li><a href="#">Retours</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Entreprise</h4>
+                        <ul>
+                            <li><a href="#">À propos</a></li>
+                            <li><a href="#">Carrières</a></li>
+                            <li><a href="#">Presse</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 APEX Performance. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
