@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* App shell styles */
+html, body, #root {
+  height: 100%;
+}
+body {
+  background-color: #0a0a0a;
+  color: #fff;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility for glass look */
+.glass {
+  backdrop-filter: blur(10px);
+  background: rgba(17, 24, 39, 0.5);
+}
