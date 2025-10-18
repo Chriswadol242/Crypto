@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Sport - L'Innovation en Mouvement</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>NEXUS</h1>
+                <span>SPORT</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#products">Produits</a></li>
+                <li><a href="#technology">Technologie</a></li>
+                <li><a href="#about">À Propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with 3D Scene -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">L'Innovation</span>
+                <span class="title-line">en Mouvement</span>
+            </h1>
+            <p class="hero-subtitle">Découvrez la nouvelle génération de chaussures de sport avec notre technologie 3D révolutionnaire</p>
+            <button class="cta-button">Explorer la Collection</button>
+        </div>
+        <div id="three-container" class="three-container"></div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Nos Produits</h2>
+            <div class="products-grid">
+                <div class="product-card" data-product="1">
+                    <div class="product-3d" id="product-3d-1"></div>
+                    <h3>Nexus Air Max</h3>
+                    <p>Technologie d'amortissement révolutionnaire</p>
+                    <span class="price">299€</span>
+                </div>
+                <div class="product-card" data-product="2">
+                    <div class="product-3d" id="product-3d-2"></div>
+                    <h3>Nexus Speed</h3>
+                    <p>Performance maximale pour les athlètes</p>
+                    <span class="price">349€</span>
+                </div>
+                <div class="product-card" data-product="3">
+                    <div class="product-3d" id="product-3d-3"></div>
+                    <h3>Nexus Future</h3>
+                    <p>Design futuriste et confort ultime</p>
+                    <span class="price">399€</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="technology">
+        <div class="container">
+            <h2 class="section-title">Technologie 3D</h2>
+            <div class="tech-content">
+                <div class="tech-text">
+                    <h3>Impression 3D Avancée</h3>
+                    <p>Nos chaussures sont créées avec une technologie d'impression 3D de pointe, permettant une personnalisation parfaite et des performances optimales.</p>
+                    <ul class="tech-features">
+                        <li>Matériaux recyclables</li>
+                        <li>Adaptation parfaite au pied</li>
+                        <li>Résistance maximale</li>
+                        <li>Design unique</li>
+                    </ul>
+                </div>
+                <div class="tech-visual" id="tech-3d"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">À Propos de Nexus</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Nexus Sport révolutionne l'industrie de la chaussure de sport avec des technologies 3D innovantes. Nous croyons que chaque athlète mérite des chaussures parfaitement adaptées à ses besoins.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>50K+</h3>
+                            <p>Athlètes Satisfaits</p>
+                        </div>
+                        <div class="stat">
+                            <h3>99%</h3>
+                            <p>Matériaux Recyclables</p>
+                        </div>
+                        <div class="stat">
+                            <h3>24/7</h3>
+                            <p>Support Client</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contactez-Nous</h2>
+            <div class="contact-content">
+                <form class="contact-form">
+                    <input type="text" placeholder="Nom" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Message" rows="5" required></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+                <div class="contact-info">
+                    <h3>Informations</h3>
+                    <p>📧 contact@nexussport.com</p>
+                    <p>📞 +33 1 23 45 67 89</p>
+                    <p>📍 123 Avenue Innovation, Paris</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>NEXUS SPORT</h3>
+                    <p>L'Innovation en Mouvement</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#products">Produits</a>
+                    <a href="#technology">Technologie</a>
+                    <a href="#about">À Propos</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nexus Sport. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
