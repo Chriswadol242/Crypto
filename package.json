@@ -1,0 +1,29 @@
+{
+  "name": "nexus-sport-3d-website",
+  "version": "1.0.0",
+  "description": "Site web 3D moderne pour Nexus Sport - concurrent de Nike",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'Build completed'",
+    "serve": "python3 -m http.server 8000"
+  },
+  "keywords": [
+    "3d",
+    "website",
+    "sport",
+    "shoes",
+    "three.js",
+    "interactive"
+  ],
+  "author": "Nexus Sport Team",
+  "license": "MIT",
+  "dependencies": {
+    "three": "^0.128.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
