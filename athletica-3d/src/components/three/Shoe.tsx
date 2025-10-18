@@ -1,15 +1,15 @@
 import { Suspense } from 'react'
 import { useGLTF } from '@react-three/drei'
-import { GroupProps } from '@react-three/fiber'
+import type { JSX } from 'react'
 
 const SHOE_URL = 'https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/shoe/model.gltf'
 
-function ShoeModel(props: GroupProps) {
+function ShoeModel(props: JSX.IntrinsicElements['group']) {
   const { scene } = useGLTF(SHOE_URL)
   return <primitive object={scene} {...props} />
 }
 
-function ShoePlaceholder(props: GroupProps) {
+function ShoePlaceholder(props: JSX.IntrinsicElements['group']) {
   return (
     <group {...props}>
       <mesh castShadow receiveShadow>
@@ -24,7 +24,7 @@ function ShoePlaceholder(props: GroupProps) {
   )
 }
 
-export function Shoe(props: GroupProps) {
+export function Shoe(props: JSX.IntrinsicElements['group']) {
   return (
     <Suspense fallback={<ShoePlaceholder {...props} />}>
       <ShoeModel {...props} />
