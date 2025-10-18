@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* App shell styles */
+html, body, #root {
+  height: 100%;
+}
+body {
+  @apply bg-neutral-950 text-white antialiased;
+}
+
+/* Utility for glass look */
+.glass {
+  backdrop-filter: blur(10px);
+  background: rgba(17, 24, 39, 0.5);
+}
